@@ -1,4 +1,5 @@
 # LightBnB
+A project to work with connecting Databases to an app.
 
 ## Project Structure
 
