@@ -175,7 +175,7 @@ const getAllProperties = function (options, limit = 10) {
   // 4 Add any query that comes after the WHERE clause
  
   queryString += `
-  GROUP BY properties.id`;
+  GROUP BY properties.id `;
 
   if (options.minimum_rating) {
     queryParams.push(options.minimum_rating);
@@ -184,7 +184,8 @@ const getAllProperties = function (options, limit = 10) {
   }
 
   queryParams.push(limit);
-  queryString += `ORDER BY cost_per_night
+  queryString += `
+  ORDER BY cost_per_night
   LIMIT $${queryParams.length}`;
 
  
